@@ -14,7 +14,7 @@ const fetchProductsFromEcommerceAPIs = async (
   minPrice,
   maxPrice
 ) => {
-  const token = process.env.ACCESS_TOKEN;
+  let token = process.env.ACCESS_TOKEN;
   if (!token) {
     throw new Error("ACCESS_TOKEN is not defined");
   }
